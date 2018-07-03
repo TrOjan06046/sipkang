@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Sipkang</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="lib/framework7/css/framework7.css">
+  <link rel="stylesheet" href="lib/framework7/css/framework7.md.css">
+  <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/logo-kemenag.png">
+</head>
+
+<body>
+  <div id="app">
+    <div class="page" id="main-page">
+    <div class="statusbar"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="page">
+        <div class="page-content">
+          <div class="bg-side-panel">
+              <img class="img-side-panel" src="img/kemenag.jpg">
+          </div>
+          <div class="user-session" id="name-employee-login">Nama Pegawai yang login</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="#" class="panel-close" style="text-decoration:none;">Home</a>
+              </li>
+              <li>
+                <a href="/profile/" class="panel-close" style="text-decoration:none;">Profile</a>
+              </li>
+              <li>
+                <a href="/about/" class="panel-close" style="text-decoration:none;">About</a>
+              </li>
+              <li>
+                <a href="/change/" class="panel-close" style="text-decoration:none;">Change Password</a>
+              </li>
+              <li>
+                <a href="/logout/" class="panel-close" id="logout" style="text-decoration:none;">Logout</a>
+                <!-- <a href="/logout/" class="panel-close logout" style="text-decoration:none;">Logout</a> -->
+
+              </li>
+            </ul>
+          </div>
+
+            <p style="font-style:italic">Version 1.0.0</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <img class="logo-esip" src="img/sipkang.png">
+            <!-- <div class="logo-title"><img src="/img/e-sip-.png"></div> -->
+            <!-- <div class="title sliding">e-SIP</div> -->
+            <div class="right">
+              <a href="/inbox/" class="link icon-only">
+                <i class="f7-icons">email_fill<span class="badge color-red count-notif" id="count-notif" style="display: none;"></span></i>
+                <!-- <i class="f7-icons">email_fill</i>                 -->
+              </a>
+
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Cari" />
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button">Cancel</span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page-content infinite-scroll-content infinite-scroll-top">
+          <div class="block-title searchbar-found">Informasi Terbaru :</div>
+
+          <div class="list components-list searchbar-found">
+
+            <div class="list media-list">
+
+                <ul id="listInfo">
+                      <!-- get informasi -->
+                </ul>
+
+            </div>
+
+          </div>
+          <div class="list simple-list searchbar-not-found">
+            <ul>
+              <li>Data tidak ditemukan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="login-screen" style="display: none;">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+        </div>
+        <img class="logo-esip" src="img/sipkang.png">
+        <div class="right">
+        </div>
+      </div>
+    </div>
+    <div class="block" style="display: flex; align-items: center; justify-content: center; top: 10%;">
+      <img class="img-login" style="width: 175px;" src="img/e-sip.png">
+    </div>
+    <div class="page-content">
+      <div class="error"></div>
+      <form id="form-login">
+        <div class="list">
+          <ul>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">NIP</div>
+                <div class="item-input-wrap">
+                  <input type="text" name="username" id="demo-username-1" placeholder="Your NIP">
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Password</div>
+                <div class="item-input-wrap">
+                  <input type="password" name="password" id="demo-password-1" placeholder="Your password">
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="list">
+          <div class="block">
+            <a class="button button-raised button-big button-fill app-login" >Sign In</a>
+            <
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  </div>
+
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+  <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

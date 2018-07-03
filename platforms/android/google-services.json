@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "467818306482",
+    "firebase_url": "https://sipkang-207601.firebaseio.com",
+    "project_id": "sipkang-207601",
+    "storage_bucket": "sipkang-207601.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467818306482:android:fa2df12e70bcc542",
+        "android_client_info": {
+          "package_name": "com.example.sipkang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467818306482-htj3ikbp63s0h3l7l74dkm5sp9b6r29h.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "467818306482-htj3ikbp63s0h3l7l74dkm5sp9b6r29h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAohFfKKRvhXa8GSz6xhLJuymcSSPLjhVY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

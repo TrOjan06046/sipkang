@@ -1,0 +1,31 @@
+{
+  "name": "com.example.sipkang",
+  "displayName": "SipKang",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "phonegap-plugin-push": "^2.1.3"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "phonegap-plugin-push": {
+        "SENDER_ID": "467818306482",
+        "FCM_VERSION": "11.6.2"
+      }
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
